@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Lime Soda",
+    "src": "lime-soda.jpg",
+    "category": "Beverages"
+  },
+  {
+    "name": "Mango Smoothie",
+    "src": "mango-smoothie.jpg",
+    "category": "Beverages"
+  },
+  {
+    "name": "Pineapple Smoothie",
+    "src": "pineapple-smoothie.jpg",
+    "category": "Beverages"
+  },
+  {
+    "name": "Blackcurrant Smoothie",
+    "src": "blackcurrant-smoothie.jpg",
+    "category": "Beverages"
+  },
+
+  {
+    "name": "Mojito",
+    "src": "mojito.jpg",
+    "category": "Beverages"
+  }
+]

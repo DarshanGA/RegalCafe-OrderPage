@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Cold Coffee",
+    "src": "cold-coffee.jpg",
+    "category": "Cold Coffee Brews"
+  },
+  {
+    "name": "Oreo Shake",
+    "src": "oreo-shake.jpg",
+    "category": "Cold Coffee Brews"
+  },
+  {
+    "name": "Iced Chocolate Coffee",
+    "src": "choco-coffee.jpg",
+    "category": "Cold Coffee Brews"
+  }
+]
