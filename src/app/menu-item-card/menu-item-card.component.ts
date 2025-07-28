@@ -8,11 +8,10 @@ import { Component, Input, signal } from '@angular/core';
 })
 export class MenuItemCardComponent {
 
-  assetFolderReltLocation = "../../assets/";
+  assetFolderReltLocation = "assets/";
   @Input({required: true}) itemCatFolderName = "";
   @Input({required: true}) menuItemImage = "";
   @Input({required: true}) itemName = "";
-  computedPath = "../../assets/Appetizers/chicken-burger.jpg";
   
 
   getCurrentMenuItemImage(){
