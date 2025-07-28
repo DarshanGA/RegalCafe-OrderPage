@@ -1,0 +1,57 @@
+.menu-item {
+  background: #2c2c2c;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers children horizontally */
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.03);
+}
+
+.menu-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.menu-item h3 {
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+  color: #f5c842;
+}
+
+.menu-item span {
+  font-size: large;
+  font-weight: bold;
+  color: #aaa;
+}
+
+.qty-controls {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 0.6rem;
+}
+
+.qty-controls button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #f5c842;
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.qty-controls button:hover {
+  background: #ffd700;
+}

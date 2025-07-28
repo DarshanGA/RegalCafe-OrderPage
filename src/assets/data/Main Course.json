@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Hakka Noodles(Veg)",
+    "src": "hakka-noodles.jpg",
+    "category": "Main Course"
+  },
+  {
+    "name": "Hakka Noodles(Non-Veg)",
+    "src": "hakka-noodles.jpg",
+    "category": "Main Course"
+  },
+  {
+    "name": "Fried Rice(Veg)",
+    "src": "fried-rice.jpg",
+    "category": "Main Course"
+  },
+  {
+    "name": "Fried Rice(Non-Veg)",
+    "src": "fried-rice.jpg",
+    "category": "Main Course"
+  },
+  {
+    "name": "Fried Rice(Egg)",
+    "src": "fried-rice.jpg",
+    "category": "Main Course"
+  },
+  {
+    "name": "Penne Arrabiata Pasta",
+    "src": "penne.jpg",
+    "category": "Main Course"
+  },
+  {
+    "name": "Macaroni Pasta",
+    "src": "macaroni.jpg",
+    "category": "Main Course"
+  },
+  {
+    "name": "Spaghetti Pasta",
+    "src": "spaghetti.jpg",
+    "category": "Main Course"
+  }
+]

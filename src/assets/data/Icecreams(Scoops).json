@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Vanilla Scoop",
+    "src": "vanilla-ice.jpg",
+    "category": "Icecreams(Scoops)"
+  },
+  {
+    "name": "Alphonso Mango Scoop",
+    "src": "mango-ice.jpg",
+    "category": "Icecreams(Scoops)"
+  },
+  {
+    "name": "Chocolate Scoop",
+    "src": "choco-ice.jpg",
+    "category": "Icecreams(Scoops)"
+  },
+  {
+    "name": "Butterscotch Scoop",
+    "src": "butterscotch-ice.jpg",
+    "category": "Icecreams(Scoops)"
+  }
+]

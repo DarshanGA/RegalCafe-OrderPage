@@ -1,0 +1,81 @@
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #222;
+  border-bottom: 1px solid #333;
+}
+
+.category-button {
+  background-color: #333;
+  color: #f5f5f5;
+  border: 2px solid #f5c842;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-button:hover,
+.category-button.active {
+  background-color: #f5c842;
+  color: #111;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+  padding: 1.5rem;
+}
+
+/* from GPT */
+.site-header {
+  background: #111;
+  color: #f5c842;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "logo title tagline";
+  align-items: center;
+  padding: 0.75rem 1rem;
+  gap: 0.5rem;
+}
+
+.logo {
+  grid-area: logo;
+  height: 100px;
+  width: auto;
+  justify-self: start;
+}
+
+.title {
+  grid-area: title;
+  margin: 0;
+  text-align: center;
+  justify-self: center;
+}
+
+.tagline {
+  font-weight: bold;
+  grid-area: tagline;
+  justify-self: end;
+  white-space: nowrap;
+}
+
+/* ✅ Small screen fix */
+@media (max-width: 600px) {
+  .site-header {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "logo title"
+      ". tagline";
+  }
+
+  .tagline {
+    justify-self: center;
+    font-size: 0.875rem;
+  }
+}

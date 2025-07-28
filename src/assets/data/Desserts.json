@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Brownie",
+    "src": "brownie.jpg",
+    "category": "Desserts"
+  },
+  {
+    "name": "Sizzling Brownie",
+    "src": "sizzling-brownie.jpg",
+    "category": "Desserts"
+  }
+]
