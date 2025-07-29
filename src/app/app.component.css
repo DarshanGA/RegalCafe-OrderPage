@@ -6,6 +6,7 @@
   padding: 1rem;
   background-color: #222;
   border-bottom: 1px solid #333;
+  position:relative;
 }
 
 .category-button {
@@ -80,7 +81,6 @@
   }
 }
 
-
 .order-assistant {
   position: fixed;
   bottom: 20px;
@@ -93,4 +93,9 @@
   cursor: pointer;
   z-index: 1000; /* ensure it stays above everything else */
   transition: transform 0.2s;
+}
+
+.badge-wrapper {
+  position: relative;
+  display: inline-block;
 }

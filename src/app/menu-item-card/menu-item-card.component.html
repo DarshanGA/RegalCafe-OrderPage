@@ -1,4 +1,4 @@
-<div class="menu-item" [ngClass]="{ active: currentItemQuantity > 0 }">
+<div class="menu-item" [ngClass]="{ active: currentItemQuantity() > 0 }">
   <img
     src="{{ isVeg ? 'veg.jpg' : 'nonVeg.jpg' }}"
     alt="{{ isVeg ? 'VEG' : 'NON-VEG' }}"
@@ -11,7 +11,7 @@
     height="282 px"
   />
 
-  @if(currentItemQuantity > 0){
+  @if(currentItemQuantity() > 0){
 
   <app-selected-tick></app-selected-tick>
   }
@@ -20,11 +20,11 @@
     <button
       id="quantityDecrementButton"
       (click)="decreaseItemQuantity()"
-      [disabled]="currentItemQuantity === 0"
+      [disabled]="currentItemQuantity() === 0"
     >
       -
     </button>
-    <span id="qty-${item.name}">{{ currentItemQuantity }}</span>
+    <span id="qty-${item.name}">{{ currentItemQuantity() }}</span>
     <button id="quantityIncrementButton" (click)="increaseItemQuantity()">
       +
     </button>

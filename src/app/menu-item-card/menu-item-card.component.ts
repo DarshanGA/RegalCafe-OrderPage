@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output, signal } from '@angular/core';
 import { SelectedTickComponent } from "../selected-tick/selected-tick.component";
 import { MenuItem } from '../models/menu-item.model';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-menu-item-card',
@@ -17,11 +16,9 @@ export class MenuItemCardComponent {
   @Input({ required: true }) menuItemImage = "";
   @Input({ required: true }) itemName = "";
   @Input({ required: true }) isVeg = true;
-  currentItemQuantity = 0;
+  @Input({ required: true }) currentItemQuantity = signal(0);
 
-  @Output() addItemEvent = new EventEmitter<MenuItem>();
-  @Output() removeItemEvent = new EventEmitter<void>();
-
+  @Output() orderItemChangeEvent = new EventEmitter<MenuItem>();
 
   getCurrentMenuItemImage() {
 
@@ -30,14 +27,16 @@ export class MenuItemCardComponent {
 
   increaseItemQuantity() {
 
-    this.currentItemQuantity++;
-    return this.addItemEvent.emit({ category: this.itemCatFolderName, itemName: this.itemName, quantity: this.currentItemQuantity});
+    this.currentItemQuantity.set(this.currentItemQuantity() + 1);
+    //console.log(`Category: ${this.itemCatFolderName}, Item Name: ${this.itemName}, Item Quantity: ${this.currentItemQuantity}`);
+    return this.orderItemChangeEvent.emit({ category: this.itemCatFolderName, itemName: this.itemName, quantity: this.currentItemQuantity()});
   }
 
   decreaseItemQuantity() {
 
-    this.currentItemQuantity = this.currentItemQuantity - 1 < 0 ? 0 : this.currentItemQuantity - 1;
-    return this.removeItemEvent.emit();
+    this.currentItemQuantity.set((this.currentItemQuantity() - 1  < 0) ? 0 : this.currentItemQuantity() - 1);
+    //console.log(`Category: ${this.itemCatFolderName}, Item Name: ${this.itemName}, Item Quantity: ${this.currentItemQuantity}`);
+    return this.orderItemChangeEvent.emit({ category: this.itemCatFolderName, itemName: this.itemName, quantity: this.currentItemQuantity()});
   }
 }
 

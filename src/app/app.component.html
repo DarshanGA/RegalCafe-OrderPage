@@ -6,15 +6,21 @@
 
 <div class="category-buttons" id="categoryButtons">
   @for(menu of menuOptions; track $index){
+  <div class="badge-wrapper">
+    <button
+      class="category-button"
+      id="menu_button_{{ $index }}"
+      [ngClass]="{ active: $index === currentActiveMenuIndex }"
+      (click)="selectNewCategory($index)"
+    >
+      {{ menu }}
+    </button>
+    @if(doesCategoryExists(menu)){
 
-  <button
-    class="category-button"
-    id="menu_button_{{ $index }}"
-    [ngClass]="{ active: $index === currentActiveMenuIndex }"
-    (click)="selectNewCategory($index)"
-  >
-    {{ menu }}
-  </button>
+      <app-badge></app-badge>
+    }
+  </div>
+
   }
 </div>
 
@@ -25,9 +31,9 @@
     itemCatFolderName="{{ item.category }}"
     menuItemImage="{{ item.src }}"
     itemName="{{ item.name }}"
-    [isVeg]= "item.isVeg"
-    (addItemEvent)="addToOrders($event)"
-    (removeItemEvent)="removeFromOrders()"
+    [currentItemQuantity]="getItemCount(item.category, item.name)"
+    [isVeg]="item.isVeg"
+    (orderItemChangeEvent)="updateOrders($event)"
   ></app-menu-item-card>
 
   }
@@ -35,6 +41,6 @@
 <div class="order-assistant">
   @if(orders.length > 0){
 
-    <app-place-order></app-place-order>
+  <app-place-order orderSummary="{{getOrderSummary()}}"></app-place-order>
   }
 </div>

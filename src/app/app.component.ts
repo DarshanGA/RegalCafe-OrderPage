@@ -11,12 +11,13 @@ import Pizzeria from "../assets/data/Pizzeria.json"
 import { CommonModule } from '@angular/common';
 import { MenuItem } from './models/menu-item.model';
 import { PlaceOrderComponent } from "./place-order/place-order.component";
+import { BadgeComponent } from "./badge/badge.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [MenuItemCardComponent, CommonModule, PlaceOrderComponent]
+  imports: [MenuItemCardComponent, CommonModule, PlaceOrderComponent, BadgeComponent]
 })
 export class AppComponent {
   title = 'regal-cafe-angular';
@@ -24,48 +25,102 @@ export class AppComponent {
   menuOptions = ["Appetizers", "Beverages", "Cold Coffee Brews", "Desserts", "Icecreams(Scoops)", "Soups", "Main Course", "Pizzeria"];
   currentActiveMenuIndex = 0;
   currentActiveMenuItem = this.menuOptions[this.currentActiveMenuIndex];
-  currentMenuItemsData = signal(Appetizers) ;
+  currentMenuItemsData = signal(Appetizers);
   orders: MenuItem[] = [];
 
-  selectNewCategory(index: number){
+  selectNewCategory(index: number) {
 
     this.currentActiveMenuIndex = index;
-    switch(index){
+    switch (index) {
 
       case 0: this.currentMenuItemsData.set(Appetizers);
-      break;
+        break;
 
       case 1: this.currentMenuItemsData.set(Beverages);
-      break;
+        break;
 
       case 2: this.currentMenuItemsData.set(ColdCoffeeBrews);
-      break;
-      
+        break;
+
       case 3: this.currentMenuItemsData.set(Desserts);
-      break;
+        break;
 
       case 4: this.currentMenuItemsData.set(IcecreamsScoops);
-      break;
+        break;
 
       case 5: this.currentMenuItemsData.set(Soups);
-      break;
+        break;
 
       case 6: this.currentMenuItemsData.set(MainCourse);
-      break;
+        break;
 
       case 7: this.currentMenuItemsData.set(Pizzeria);
-      break;
+        break;
     }
   }
 
-  addToOrders(input: MenuItem){
+  updateOrders(input: MenuItem) {
 
-    this.orders.push(input);
-    console.log(this.orders);
+    if (input) {
+
+
+      const foundIndex = this.getIndexByCategoryAndName(input.category, input.itemName);
+      console.log(`Found index in order array: ${foundIndex}`);
+      if (foundIndex === -1) {
+
+        if (input.quantity !== 0)
+          this.orders.push(input);
+      }
+      else {
+
+        if (input.quantity === 0) {
+
+          const removedItem = this.orders.splice(foundIndex, 1);
+          console.info(`Removed order item from orders array: ${JSON.stringify(removedItem)}`);
+        }
+        else {
+
+          this.orders[foundIndex].quantity = input.quantity;
+        }
+      }
+      console.log(JSON.stringify(this.orders));
+    }
   }
 
-  removeFromOrders(){
+  getIndexByCategoryAndName(givenCategory: string, givenItemName: string): number {
 
-    console.log(this.orders.pop());
+    return this.orders.findIndex(i => i.category === givenCategory && i.itemName === givenItemName);
+  }
+
+  getItemCount(category: string, itemName: string) {
+
+    const foundIndex = this.getIndexByCategoryAndName(category, itemName);
+    if (foundIndex === -1)
+      return signal(0);
+    else {
+
+      return signal(this.orders[foundIndex].quantity);
+    }
+  }
+
+  doesCategoryExists(givenCategory: string): boolean {
+
+    return this.orders.findIndex(i => i.category === givenCategory) === -1 ? false : true;
+  }
+
+  getOrderSummary() {
+
+    let temp = "";
+    if (this.orders.length === 0)
+      temp = "You haven't placed any orders yet.\n Try ordering something!";
+    else {
+
+      for (let item of this.orders) {
+
+        temp += "\n" + item.itemName + " -----> " + item.quantity + "\n";
+      }
+    }
+
+    return temp;
   }
 }

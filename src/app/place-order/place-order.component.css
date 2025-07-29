@@ -30,3 +30,12 @@ span{
   z-index: 1000;
   overflow: hidden;
 }
+
+.scrollable-pre {
+  max-height: auto;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-family: monospace;
+  padding: 8px;
+  border-radius: 4px;
+}

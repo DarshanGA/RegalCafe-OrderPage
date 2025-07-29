@@ -15,7 +15,7 @@
     "name": "Peri Peri Chicken Pizza",
     "src": "perichicken-pizza.jpg",
     "category": "Pizzeria",
-    "isVeg": true
+    "isVeg": false
   },
   {
     "name": "Peri Peri Paneer Pizza",

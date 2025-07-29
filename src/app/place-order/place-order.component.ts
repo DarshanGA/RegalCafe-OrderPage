@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, input, signal } from '@angular/core';
 import { BadgeComponent } from "../badge/badge.component";
 
 @Component({
@@ -9,6 +9,7 @@ import { BadgeComponent } from "../badge/badge.component";
 })
 export class PlaceOrderComponent {
 
+  @Input({required: true}) orderSummary = "";
   showOrderSummary = false;
 
   toggelOrderSummary(){
