@@ -2,21 +2,25 @@
   {
     "name": "Vanilla Scoop",
     "src": "vanilla-ice.jpg",
-    "category": "Icecreams(Scoops)"
+    "category": "Icecreams(Scoops)",
+    "isVeg": true
   },
   {
     "name": "Alphonso Mango Scoop",
     "src": "mango-ice.jpg",
-    "category": "Icecreams(Scoops)"
+    "category": "Icecreams(Scoops)",
+    "isVeg": true
   },
   {
     "name": "Chocolate Scoop",
     "src": "choco-ice.jpg",
-    "category": "Icecreams(Scoops)"
+    "category": "Icecreams(Scoops)",
+    "isVeg": true
   },
   {
     "name": "Butterscotch Scoop",
     "src": "butterscotch-ice.jpg",
-    "category": "Icecreams(Scoops)"
+    "category": "Icecreams(Scoops)",
+    "isVeg": true
   }
 ]

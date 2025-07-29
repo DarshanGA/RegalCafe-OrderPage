@@ -19,13 +19,22 @@
 </div>
 
 <main id="menu" class="menu-grid">
-  @for(item of currentMenuItemsData(); track $index;){
+  @for(item of currentMenuItemsData(); track item.name){
 
   <app-menu-item-card
     itemCatFolderName="{{ item.category }}"
     menuItemImage="{{ item.src }}"
     itemName="{{ item.name }}"
+    [isVeg]= "item.isVeg"
+    (addItemEvent)="addToOrders($event)"
+    (removeItemEvent)="removeFromOrders()"
   ></app-menu-item-card>
 
   }
 </main>
+<div class="order-assistant">
+  @if(orders.length > 0){
+
+    <app-place-order></app-place-order>
+  }
+</div>

@@ -1,0 +1,20 @@
+
+.tick-mark {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: #f5c842;
+  color: #111;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  display: flex;               /* ✅ makes it a flex container */
+  align-items: center;         /* ✅ vertical center */
+  justify-content: center;     /* ✅ horizontal center */
+
+  font-size: 16px;             /* adjust tick size if needed */
+  font-weight: 600;
+}

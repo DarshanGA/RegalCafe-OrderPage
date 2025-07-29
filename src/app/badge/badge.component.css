@@ -1,0 +1,17 @@
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  border-radius: 90%;
+  padding: 2px 6px;
+  font-size: 14px;
+  font-weight: bold;
+  min-width: 9px;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0 0 0 2px white; /* outline border effect */
+}

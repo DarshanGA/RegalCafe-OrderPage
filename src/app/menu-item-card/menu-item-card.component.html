@@ -1,9 +1,32 @@
-<div class="menu-item">
-  <img src="{{getCurrentMenuItemImage()}}" alt="" width="282 px" height="282 px"/>
-  <h3>{{itemName}}</h3>
+<div class="menu-item" [ngClass]="{ active: currentItemQuantity > 0 }">
+  <img
+    src="{{ isVeg ? 'veg.jpg' : 'nonVeg.jpg' }}"
+    alt="{{ isVeg ? 'VEG' : 'NON-VEG' }}"
+    class="food-type"
+  />
+  <img
+    src="{{ getCurrentMenuItemImage() }}"
+    alt=""
+    width="282 px"
+    height="282 px"
+  />
+
+  @if(currentItemQuantity > 0){
+
+  <app-selected-tick></app-selected-tick>
+  }
+  <h3>{{ itemName }}</h3>
   <div class="qty-controls">
-    <button id="quantityDecrementButton">-</button>
-    <span id="qty-${item.name}">0</span>
-    <button id="quantityIncrementButton">+</button>
+    <button
+      id="quantityDecrementButton"
+      (click)="decreaseItemQuantity()"
+      [disabled]="currentItemQuantity === 0"
+    >
+      -
+    </button>
+    <span id="qty-${item.name}">{{ currentItemQuantity }}</span>
+    <button id="quantityIncrementButton" (click)="increaseItemQuantity()">
+      +
+    </button>
   </div>
 </div>

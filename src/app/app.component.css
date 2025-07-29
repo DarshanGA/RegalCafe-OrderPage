@@ -79,3 +79,18 @@
     font-size: 0.875rem;
   }
 }
+
+
+.order-assistant {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000; /* ensure it stays above everything else */
+  transition: transform 0.2s;
+}

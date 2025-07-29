@@ -9,12 +9,14 @@ import Soups from "../assets/data/Soups.json"
 import MainCourse from "../assets/data/Main Course.json"
 import Pizzeria from "../assets/data/Pizzeria.json"
 import { CommonModule } from '@angular/common';
+import { MenuItem } from './models/menu-item.model';
+import { PlaceOrderComponent } from "./place-order/place-order.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [MenuItemCardComponent, CommonModule]
+  imports: [MenuItemCardComponent, CommonModule, PlaceOrderComponent]
 })
 export class AppComponent {
   title = 'regal-cafe-angular';
@@ -23,6 +25,7 @@ export class AppComponent {
   currentActiveMenuIndex = 0;
   currentActiveMenuItem = this.menuOptions[this.currentActiveMenuIndex];
   currentMenuItemsData = signal(Appetizers) ;
+  orders: MenuItem[] = [];
 
   selectNewCategory(index: number){
 
@@ -53,5 +56,16 @@ export class AppComponent {
       case 7: this.currentMenuItemsData.set(Pizzeria);
       break;
     }
+  }
+
+  addToOrders(input: MenuItem){
+
+    this.orders.push(input);
+    console.log(this.orders);
+  }
+
+  removeFromOrders(){
+
+    console.log(this.orders.pop());
   }
 }

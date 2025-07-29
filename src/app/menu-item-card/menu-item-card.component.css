@@ -7,6 +7,11 @@
   flex-direction: column;
   align-items: center; /* centers children horizontally */
   transition: transform 0.2s ease;
+  position: relative;
+}
+
+.menu-item.active {
+  border: 2px solid #f5c842;
 }
 
 .menu-item:hover {
@@ -28,7 +33,7 @@
 .menu-item span {
   font-size: large;
   font-weight: bold;
-  color: #aaa;
+  color: #ffffff;
 }
 
 .qty-controls {
@@ -54,4 +59,20 @@
 
 .qty-controls button:hover {
   background: #ffd700;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.food-type {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: 40px;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0 0 0 2px #ffd700
+  ; /* outline border effect */
 }
