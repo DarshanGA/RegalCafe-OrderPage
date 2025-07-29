@@ -2,26 +2,31 @@
   {
     "name": "Margherita Pizza",
     "src": "margherita-pizza.jpg",
-    "category": "Pizzeria"
+    "category": "Pizzeria",
+    "isVeg": true
   },
   {
     "name": "Sweet Corn Pizza",
     "src": "sweetcorn-pizza.jpg",
-    "category": "Pizzeria"
+    "category": "Pizzeria",
+    "isVeg": true
   },
   {
     "name": "Peri Peri Chicken Pizza",
     "src": "perichicken-pizza.jpg",
-    "category": "Pizzeria"
+    "category": "Pizzeria",
+    "isVeg": true
   },
   {
     "name": "Peri Peri Paneer Pizza",
     "src": "paneer-pizza.jpg",
-    "category": "Pizzeria"
+    "category": "Pizzeria",
+    "isVeg": true
   },
   {
     "name": "Mediterranean Pizza",
     "src": "mediterranean-pizza.jpg",
-    "category": "Pizzeria"
+    "category": "Pizzeria",
+    "isVeg": true
   }
 ]

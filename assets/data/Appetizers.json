@@ -2,86 +2,103 @@
   {
     "name": "Chicken Nuggets",
     "src": "chicken-nuggets.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": false
   },
   {
     "name": "Potato Wedges",
     "src": "potato-wedges.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "Veg Nuggets",
     "src": "veg-nuggets.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "Chilli Chicken",
     "src": "chicken-chilli.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": false
   },
   {
     "name": "Chilli Paneer",
     "src": "paneer-chilli.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "Gobi Manchurian",
     "src": "gobi.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "Veggie burger",
     "src": "veg-burger.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "Chicken burger",
     "src": "chicken-burger.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": false
   },
   {
     "name": "Peri Peri Chicken burger",
     "src": "chicken-burger.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": false
   },
   {
     "name": "Samosa(6pcs)",
     "src": "samosa.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "Jalapeño Cheese Samosa(6pcs)",
     "src": "jalapeno-samosa.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "Chicken Cheese Samosa(6pcs)",
     "src": "chicken-samosa.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": false
   },
   {
     "name": "Clubhouse Sandwich",
     "src": "club-sandwich.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "Regal Sandwich",
     "src": "regal-sandwich.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "French Fries",
     "src": "french-fries.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "Peri Peri French Fries",
     "src": "french-fries.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   },
   {
     "name": "Cottage Cheese Paneer Sandwich",
     "src": "paneer-sandwich.jpg",
-    "category": "Appetizers"
+    "category": "Appetizers",
+    "isVeg": true
   }
 ]

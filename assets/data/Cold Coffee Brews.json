@@ -2,16 +2,19 @@
   {
     "name": "Cold Coffee",
     "src": "cold-coffee.jpg",
-    "category": "Cold Coffee Brews"
+    "category": "Cold Coffee Brews",
+    "isVeg": true
   },
   {
     "name": "Oreo Shake",
     "src": "oreo-shake.jpg",
-    "category": "Cold Coffee Brews"
+    "category": "Cold Coffee Brews",
+    "isVeg": true
   },
   {
     "name": "Iced Chocolate Coffee",
     "src": "choco-coffee.jpg",
-    "category": "Cold Coffee Brews"
+    "category": "Cold Coffee Brews",
+    "isVeg": true
   }
 ]

@@ -2,27 +2,32 @@
   {
     "name": "Lime Soda",
     "src": "lime-soda.jpg",
-    "category": "Beverages"
+    "category": "Beverages",
+    "isVeg": true
   },
   {
     "name": "Mango Smoothie",
     "src": "mango-smoothie.jpg",
-    "category": "Beverages"
+    "category": "Beverages",
+    "isVeg": true
   },
   {
     "name": "Pineapple Smoothie",
     "src": "pineapple-smoothie.jpg",
-    "category": "Beverages"
+    "category": "Beverages",
+    "isVeg": true
   },
   {
     "name": "Blackcurrant Smoothie",
     "src": "blackcurrant-smoothie.jpg",
-    "category": "Beverages"
+    "category": "Beverages",
+    "isVeg": true
   },
 
   {
     "name": "Mojito",
     "src": "mojito.jpg",
-    "category": "Beverages"
+    "category": "Beverages",
+    "isVeg": true
   }
 ]

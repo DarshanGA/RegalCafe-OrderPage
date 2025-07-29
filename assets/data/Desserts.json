@@ -2,11 +2,13 @@
   {
     "name": "Brownie",
     "src": "brownie.jpg",
-    "category": "Desserts"
+    "category": "Desserts",
+    "isVeg": true
   },
   {
     "name": "Sizzling Brownie",
     "src": "sizzling-brownie.jpg",
-    "category": "Desserts"
+    "category": "Desserts",
+    "isVeg": true
   }
 ]
